@@ -1,7 +1,7 @@
 /*
 * @author Timm Hess
 */
-#include "TrainingSetGenerator.h"
+#include "../TrainingSetGenerator.h"
 #include "Segmentation.h"
 #include <random>
 #include <cmath>
@@ -20,7 +20,7 @@ bool USegmentation::FileIO__SaveStringTextToFile(
 	FString SaveText,
 	bool AllowOverWriting) {
 	
-	FString currGameDir = FPaths::GameDir();
+	FString currGameDir = FPaths::LaunchDir();
 	FString screenshotExtenstion = "Saved/ScreenshotMasks"; //path from GameDir to saving dir for gorund truth semantic annotation masks
 
 	if (useStandardMaskSaveDir) {
